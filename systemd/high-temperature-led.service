@@ -1,0 +1,11 @@
+[Unit]
+Description=Script that controls the high temperature LED
+After=multi-user.target
+
+[Service]
+Type=idle
+User=pi
+ExecStart=/lib/led_scripts/temperature_led.py
+
+[Install]
+WantedBy=multi-user.target

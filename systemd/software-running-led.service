@@ -1,0 +1,11 @@
+[Unit]
+Description=Script that controls the SW_running LED
+After=multi-user.target
+
+[Service]
+Type=idle
+User=pi
+ExecStart=/lib/led_scripts/direwolf_led.py
+
+[Install]
+WantedBy=multi-user.target
